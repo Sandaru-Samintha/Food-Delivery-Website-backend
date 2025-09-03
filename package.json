@@ -2,6 +2,7 @@
   "name": "food-delivery-website_backend",
   "version": "1.0.0",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "server":"nodemon server.js"
   },
