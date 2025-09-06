@@ -1,6 +1,6 @@
 import express from "express";
 import multer from "multer";
-import { addFood } from "../controllers/foodController.js";
+import { addFood, foodList } from "../controllers/foodController.js";
 
 
 
@@ -20,6 +20,8 @@ const upload = multer({storage:storageImg})
 
   //create the post method ,post method use for send the data on the server
   foodRouter.post("/add", upload.single("image"), addFood)
+  //create the get method for ,getting list of food in the database
+  foodRouter.get("/list",foodList)
 
 
 
