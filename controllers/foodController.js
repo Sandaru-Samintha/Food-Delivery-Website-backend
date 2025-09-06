@@ -30,7 +30,7 @@ const addFood = async(req,res) =>{
   }
 }
 
-//all food list 
+//all food list
 const foodList = async (req,res) =>{
   try {
     const foods = await foodModel.find({}); // fetch all the food items . and put them in to variable name foods
