@@ -30,4 +30,15 @@ const addFood = async(req,res) =>{
   }
 }
 
-export {addFood}
+//all food list 
+const foodList = async (req,res) =>{
+  try {
+    const foods = await foodModel.find({}); // fetch all the food items . and put them in to variable name foods
+    res.json({success:true,data:foods}) // this pass the data of foods
+  } catch (error) {
+    console.log(error)
+    res.json({success:false,message:"Error"})
+  }
+}
+
+export {addFood,foodList}
